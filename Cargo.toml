@@ -1,0 +1,10 @@
+[package]
+name = "arcanum"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+rand = "0.9.1"
+rand_core = { version = "0.9.3", features = ["os_rng"] }
+thiserror = "2.0.12"
+zeroize = "1.8.1"
