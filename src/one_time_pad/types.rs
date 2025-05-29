@@ -8,6 +8,7 @@ use std::{collections::HashSet, hash::Hash};
 use secrecy::{CloneableSecret, ExposeSecret, SecretBox, SecretString};
 use zeroize::{Zeroize, ZeroizeOnDrop};
 
+//=============================================================================================
 // Cipher text with secure erasing
 pub struct CipherText {
     data: Vec<u8>,
@@ -38,6 +39,7 @@ impl Zeroize for CipherText {
 
 impl ZeroizeOnDrop for CipherText {}
 
+//=============================================================================================
 // Plain text in memory protected
 #[derive(Debug)]
 pub struct PlainText {
@@ -81,6 +83,7 @@ impl PlainText {
 
 impl ZeroizeOnDrop for PlainText {}
 
+//=============================================================================================
 #[derive(Debug)]
 pub struct OtpKey {
     key_data: SecretBox<Vec<u8>>,
@@ -154,6 +157,7 @@ impl Zeroize for OtpKey {
     }
 }
 
+//=============================================================================================
 #[derive(Debug, Default)]
 pub struct ArchivedKeys {
     keys: HashSet<OtpKey>,
