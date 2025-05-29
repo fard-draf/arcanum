@@ -2,7 +2,7 @@ use zeroize::Zeroize;
 
 use crate::one_time_pad::{errors::*, types::*};
 
-pub fn encrypth_plaintxt(txt: &str, key: &OtpKey) -> Result<CipherText> {
+pub fn encrypt(txt: &str, key: &OtpKey) -> Result<CipherText> {
     let plaintxt = PlainText::new(txt.to_string())?;
 
     if plaintxt.len() != key.len() {
@@ -24,7 +24,7 @@ pub fn encrypth_plaintxt(txt: &str, key: &OtpKey) -> Result<CipherText> {
     Ok(CipherText::new(ciphertxt))
 }
 
-pub fn decrypt_ciphertxt(mut ciphertxt: CipherText, key: OtpKey) -> Result<PlainText> {
+pub fn decrypt(mut ciphertxt: CipherText, key: OtpKey) -> Result<PlainText> {
     if ciphertxt.len() != key.len() {
         return Err(ArcanumErr::SizeMismatch {
             key_len: key.len(),
