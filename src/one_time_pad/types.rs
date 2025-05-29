@@ -66,6 +66,10 @@ impl PlainText {
         })
     }
 
+    pub fn reveal(&self) -> &str {
+        self.content.expose_secret()
+    }
+
     pub fn len(&self) -> usize {
         self.length
     }
