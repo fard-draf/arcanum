@@ -5,6 +5,7 @@ edition = "2024"
 
 [dependencies]
 chrono = "0.4.41"
+log = "0.4.27"
 rand = "0.9.1"
 rand_core = { version = "0.9.3", features = ["os_rng"] }
 secrecy = { version = "0.10.3", features = ["serde"] }

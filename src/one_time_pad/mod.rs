@@ -32,7 +32,7 @@ pub use types::{ArchivedKeys, CipherText, OtpKey, PlainText};
 pub use core::cipher::{decrypt, encrypt};
 
 //==============================BUILDER AND MANAGER
-// pub use core::key_manager::{KeyManager, KeyManagerBuilder};
+pub use core::key_manager::{KeyManager, KeyManagerBuilder, KeyManagerConfig, KeyManagerStats};
 
 //==============================SPECIFIC CONSTANTS
 pub const MAX_TEXT_LENGTH: usize = 10_000;

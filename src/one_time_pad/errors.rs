@@ -20,6 +20,9 @@ pub enum ArcanumErr {
     #[error("Unvalid key")]
     KeyUnvalid,
 
+    #[error("Full archives")]
+    FullArchives,
+
     #[error("Encoding error UTF-8: {source}")]
     Uft8Encoding {
         #[from]

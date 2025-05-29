@@ -14,5 +14,7 @@ pub use crate::one_time_pad::{ArcanumErr, ArchivedKeys, CipherText, OtpKey, Plai
 //==============================FUNCTIONAL API
 pub use crate::one_time_pad::{decrypt, encrypt};
 
+pub use crate::one_time_pad::{KeyManager, KeyManagerBuilder, KeyManagerStats};
+
 //==============================CONSTANTS
 pub use crate::one_time_pad::{MAX_TEXT_LENGTH, MIN_KEY_LENGTH};
